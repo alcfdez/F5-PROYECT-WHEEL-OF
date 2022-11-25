@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@1,500&display=swap");
+header #logo img {
+  width: 10%;
+}
+header #logo #p-logo {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #557A55;
+}
+
+body {
+  background-color: #557A55;
+}
+
+/*# sourceMappingURL=styles.css.map */
