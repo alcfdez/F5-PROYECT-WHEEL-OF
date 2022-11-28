@@ -1,0 +1,117 @@
+
+
+let options = ["City 1","City 2","city 3"];
+let predefinedOption = ["Type your wish city"];
+
+let startAngle = 0;
+let arc = Math.PI / (options.length / 2);
+let spinTimeout = null;
+
+let spinArcStart = 10;
+let spinTime = 0;
+let spinTimeTotal = 0;
+
+let canvasStyle;
+
+document.getElementById("spin").addEventListener("click", spin);
+
+function colorGenerator(n) {
+  let colorGeneratorCode = "0123456789ABCDEF";
+  return String(colorGeneratorCode.substr((n >> 4) & 0x0F,1)) + colorGeneratorCode.substr(n & 0x0F,1);
+}
+
+function RGB2Color(r,g,b) {
+	return '#' + colorGenerator(r) + colorGenerator(g) + colorGenerator(b);
+}
+
+function getColor(item, maxitem) {
+  let phase = 0;
+  let center = 128;
+  let width = 127;
+  let frequency = Math.PI*2/maxitem;
+  
+  red   = Math.sin(frequency*item+2+phase) * width + center;
+  green = Math.sin(frequency*item+0+phase) * width + center;
+  blue  = Math.sin(frequency*item+4+phase) * width + center;
+  
+  return RGB2Color(red,green,blue);
+}
+
+function drawRouletteWheel() {
+  let canvas = document.getElementById("canvas");
+  
+  // if(options.length = null){
+  //   options = predefinedOption;
+  // }
+
+  if (canvas.getContext) {
+    let outsideRadius = 200;
+    let textRadius = 160;
+    let insideRadius = 50;
+
+    canvasStyle = canvas.getContext("2d");
+    canvasStyle.clearRect(0,0,500,500);
+
+    canvasStyle.strokeStyle = "black";
+    canvasStyle.lineWidth = 3;
+
+    //canvasStyle.font = 'bold 15px Rubik Mono One';
+    
+    for(let i = 0; i <= options.length; i++) {
+      let angle = startAngle + i * arc;
+      //canvasStyle.fillStyle = colors[i];
+      canvasStyle.fillStyle = getColor(i, options.length);
+
+      canvasStyle.beginPath();
+      canvasStyle.arc(250, 250, outsideRadius, angle, angle + arc, false);
+      canvasStyle.arc(250, 250, insideRadius, angle + arc, angle, true);
+      canvasStyle.stroke();
+      canvasStyle.fill();
+
+      canvasStyle.save();
+      canvasStyle.shadowOffsetX = -1;
+      canvasStyle.shadowOffsetY = -1;
+      canvasStyle.shadowBlur    = 0;
+      canvasStyle.shadowColor   = "rgb(220,220,220)";
+      canvasStyle.fillStyle = "black";
+      canvasStyle.translate(250 + Math.cos(angle + arc / 2) * textRadius, 
+                    250 + Math.sin(angle + arc / 2) * textRadius);
+      canvasStyle.rotate(angle + arc / 2 + Math.PI / 2);
+      let text = options[i];
+      canvasStyle.fillText(text, -canvasStyle.measureText(text).width / 2, 0);
+      canvasStyle.restore();
+    } 
+
+    //Arrow
+    canvasStyle.fillStyle = "black";
+    canvasStyle.beginPath();
+    canvasStyle.moveTo(250 - 4, 250 - (outsideRadius + 5));
+    canvasStyle.lineTo(250 + 4, 250 - (outsideRadius + 5));
+    canvasStyle.lineTo(250 + 4, 250 - (outsideRadius - 5));
+    canvasStyle.lineTo(250 + 9, 250 - (outsideRadius - 5));
+    canvasStyle.lineTo(250 + 0, 250 - (outsideRadius - 13));
+    canvasStyle.lineTo(250 - 9, 250 - (outsideRadius - 5));
+    canvasStyle.lineTo(250 - 4, 250 - (outsideRadius - 5));
+    canvasStyle.lineTo(250 - 4, 250 - (outsideRadius + 5));
+    canvasStyle.fill();
+  }
+}
+
+function spin() {
+  spinAngleStart = Math.random() * 10 + 10;
+  spinTime = 0;
+  spinTimeTotal = Math.random() * 3 + 4 * 3000;
+  rotateWheel();
+}
+
+function rotateWheel() {
+  spinTime += 30;
+  if(spinTime >= spinTimeTotal) {
+    stopRotateWheel();
+    return;
+  }
+  let spinAngle = spinAngleStart - easeOut(spinTime, 0, spinAngleStart, spinTimeTotal);
+  startAngle += (spinAngle * Math.PI / 180);
+  drawRouletteWheel();
+  spinTimeout = setTimeout('rotateWheel()', 30);
+}
