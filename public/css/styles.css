@@ -16,7 +16,7 @@ header .logo #menu {
   height: 15%;
 }
 
-h5 {
+h4 {
   color: #557A55;
   font-family: "Rubik Mono One", sans-serif;
   justify-content: left;
@@ -45,6 +45,15 @@ video {
   video {
     width: 100%;
   }
+}
+footer {
+  background-color: #F2F3CA;
+  text-align: center;
+  height: 50px;
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 15%;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */
