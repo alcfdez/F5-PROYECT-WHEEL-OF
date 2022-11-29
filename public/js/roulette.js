@@ -1,7 +1,7 @@
 
 
-let options = ["City 1","City 2","city 3"];
-let predefinedOption = ["Type your wish city"];
+let options = ["City 1","City 2","city 3","City 4","City 5","city 6"];
+// let predefinedOption = ["Type your wish city"];
 
 let startAngle = 0;
 let arc = Math.PI / (options.length / 2);
@@ -41,7 +41,7 @@ function drawRouletteWheel() {
   let canvas = document.getElementById("canvas");
   
   // if(options.length = null){
-  //   options = predefinedOption;
+  //    options = predefinedOption;
   // }
 
   if (canvas.getContext) {
@@ -55,9 +55,9 @@ function drawRouletteWheel() {
     canvasStyle.strokeStyle = "black";
     canvasStyle.lineWidth = 3;
 
-    //canvasStyle.font = 'bold 15px Rubik Mono One';
+    canvasStyle.font = 'bold 15px Rubik Mono One';
     
-    for(let i = 0; i <= options.length; i++) {
+    for(let i = 0; i < options.length; i++) {
       let angle = startAngle + i * arc;
       //canvasStyle.fillStyle = colors[i];
       canvasStyle.fillStyle = getColor(i, options.length);
