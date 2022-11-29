@@ -1,15 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@1,500&display=swap");
-header #logo img {
-  width: 10%;
+header {
+  background-color: white;
 }
-header #logo #p-logo {
+header .logo {
+  display: flex;
+  justify-content: space-between;
+}
+header .logo img {
+  width: 40%;
+}
+header .logo #menu {
+  width: 15%;
+}
+
+h5 {
+  color: #557A55;
   font-family: "Rubik Mono One", sans-serif;
+  justify-content: left;
+  padding: 0%;
+  margin: 0%;
+  font-size: 50%;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Rubik", sans-serif;
   color: #557A55;
 }
 
-main {
-  background-color: #557A55;
+/* @media (max-width: 374px) {
+    img { width: 100%; }
+
+  } */
+video {
+  width: 100%;
+  margin-top: 10%;
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  video {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

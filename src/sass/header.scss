@@ -1,17 +1,49 @@
 @import '_variables.scss';
+
 header{
-    width: 100px;
-    height: 20px;
+
     background-color: white;
-#logo{
-    img{
-        width: 10%;
+
+        .logo{
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            width: 40%;
+        }
+
+        #menu {
+            width: 15%;
+                
+            }
+
+        }
+
     }
-    #p-logo{
-        font-family: 'Rubik Mono One', sans-serif;
+    
+        h5{
+            color: $fontColor;
+            font-family: $font-title;
+            justify-content: left;
+            padding:0%;
+            margin: 0%;
+            font-size: 50%;
+           
+
+        }
+
+        section{
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-text;
         color: $fontColor;
-    }
-}
+        
 
-}
+        }
 
+
+
+/* @media (max-width: 374px) {
+    img { width: 100%; }
+
+  } */
