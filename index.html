@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <section id="input-box">
+      <div id="list-title">
+        <h2>WERE WOULD YOU WANT TO GO?</h2>
+        <h2>ENTER AS MANY CITIES AS YOU WANT</h2>
+      </div>
+      <form id="add-country-form">
+        <input
+          type="text"
+          name="new-task-input"
+          id="add-country-input"
+          placeholder="Type your wish city here..."
+        />
+        <button type="submit" id="new-country-submit">SUBMIT</button>
+      </form>
+
+      <div class="countries-list">
+        <h2>WOULD YOU LIKE TO EDIT OR CLEAR ANY OF YOUR CHOSEN LOCATIONS?</h2>
+
+        <div id="countries">
+        </div>
+      </div>
+    </section>
+    <script src="./js/input-box.js"></script>
+  </body>
 </html>
