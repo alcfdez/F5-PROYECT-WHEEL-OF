@@ -115,3 +115,21 @@ function rotateWheel() {
   drawRouletteWheel();
   spinTimeout = setTimeout('rotateWheel()', 30);
 }
+
+function stopRotateWheel() {
+  clearTimeout(spinTimeout);
+  let degrees = startAngle * 180 / Math.PI + 90;
+  let arcd = arc * 180 / Math.PI;
+  let index = Math.floor((360 - degrees % 360) / arcd);
+  canvasStyle.save();
+  canvasStyle.font = 'bold 30px Helvetica, Arial';
+  let text = options[index]
+  canvasStyle.fillText(text, 250 - canvasStyle.measureText(text).width / 2, 250 + 10);
+  canvasStyle.restore();
+}
+function easeOut(t, b, c, d) {
+  let ts = (t/=d)*t;
+  let tc = ts*t;
+  return b+c*(tc + -3*ts + 3*t);
+}
+drawRouletteWheel();
