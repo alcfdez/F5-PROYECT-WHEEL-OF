@@ -6,10 +6,12 @@ header .logo {
   justify-content: space-between;
 }
 header .logo img {
-  width: 40%;
+  width: 50%;
+  height: 85%;
 }
 header .logo #menu {
   width: 15%;
+  height: 15%;
 }
 
 h5 {
