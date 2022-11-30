@@ -1,25 +1,23 @@
 export function inputApp() {
-    
-    const form = document.querySelector("#add-country-form");
-    const input = document.querySelector("#add-country-input");
-    const country_list = document.querySelector("#countries");
+  const form = document.querySelector("#add-country-form");
+  const input = document.querySelector("#add-country-input");
+  const country_list = document.querySelector("#countries");
 
+
+  let allCountries = [];
   form.addEventListener("submit", (e) => {
-    console.log("funciona");
     e.preventDefault();
     const country = input.value;
     const new_country = document.createElement("div");
-    console.log(country);
     new_country.classList.add("country");
     const country_content = document.createElement("div");
     country_content.classList.add("country-content");
     new_country.appendChild(country_content);
-    // let options = [];
-    // function createCitiesList(country) {
-    //   let pepe = options.push(country);
-    //   console.log(pepe);
-    // }
-    // createCitiesList();
+
+    
+    let countriesList = allCountries.push(country);
+    console.log(allCountries);
+
     const new_country_input = document.createElement("input");
     new_country_input.classList.add("new_country_input");
     new_country_input.type = "text";
