@@ -8,33 +8,25 @@ header{
         display: flex;
         justify-content: space-between;
 
-        img {
-            width: 50%;
-            height: 85%;
-        }
+            img {
+             width: 100px;
+             height: 25px;
+             }
 
-        #menu {
-            width: 15%;
-            height: 15%;
-
-                
-            }
-        
+             h6{
+             color: $fontColor;
+             font-family: $font-title;
+             font-size: 30%;
+             }
 
         }
 
+        .menubar{
+            background-color: $background-color-ruleta;
+        }
     }
     
-        h5{
-            color: $fontColor;
-            font-family: $font-title;
-            justify-content: left;
-            padding:0%;
-            margin: 0%;
-            font-size: 50%;
-           
-
-        }
+    
 
         section{
         display: flex;
