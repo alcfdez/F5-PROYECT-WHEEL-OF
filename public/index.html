@@ -26,11 +26,34 @@
         </li>
     </ul>
    </header>
-    
 
-   <input type="button" value="Hacer girar" style="float:left;" id='spin' />
+   <section id="input-box">
+    <div id="list-title">
+      <h2>WERE WOULD YOU WANT TO GO?</h2>
+      <h2>ENTER AS MANY CITIES AS YOU WANT</h2>
+    </div>
+    <form id="add-country-form">
+      <input
+        type="text"
+        name="new-task-input"
+        id="add-country-input"
+        placeholder="Type your wish city here..."
+      />
+      <button type="submit" id="new-country-submit">SUBMIT</button>
+    </form>
+    <div class="countries-list">
+      <h2>WOULD YOU LIKE TO EDIT OR CLEAR ANY OF YOUR CHOSEN LOCATIONS?</h2>
+      <div id="countries">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <input type="button" value="Hacer girar" style="float:left;" id='spin' />
    <canvas id="canvas" width="500" height="500"></canvas>
-   <script src="/public/js/roulette.js"></script>
+  </section>
+  <script src="/public/js/roulette.js"></script>
+  
 
 </body>
 </html>
