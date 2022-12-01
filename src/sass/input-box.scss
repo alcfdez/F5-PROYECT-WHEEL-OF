@@ -1,86 +1,165 @@
-* {
-    #input-box {
-      background-color: $background-color-ruleta;
-      padding-bottom: 20px;
-      #list-title {
-        h2 {
-          font-family: $font-title;
-          color: $fontColor;
+#roulette {
+  background-color: $background-color-ruleta;
+  padding: 25px;
+  display: flex;
+  #list-title {
+    h2 {
+      margin-bottom:5% ;
+      font-family: $font-title;
+      color: $fontColor;
+    }
+    h4 {
+      margin-bottom: 5%;
+      text-align: center;
+      font-family: $font-title;
+      color: $fontColor;
+    }
+  }
+  form {
+    #add-country-input {
+      appearance: none;
+      outline: none;
+      border: 3px solid black;
+      width: 60%;
+      height: 45px;
+      font-size: 16px;
+      font-family: $font-text;
+      color: $placeholder-color-text;
+      margin: 10px 0 10px ;
+      padding: 3px;
+      margin-left: 10%;
+    }
+    ::placeholder {
+      color: $placeholder-color-text;
+    }
+    #new-country-submit {
+      border: 3px solid black;
+      background-color: $background-color-botton-green;
+      color: $text-color-button-green;
+      height: 56px;
+    }
+  }
+  .countries-list {
+    h2 {
+      margin: 0;
+      font-family: $font-title;
+      color: $fontColor;
+    }
+    #countries {
+      .country {
+        display: flex;
+        border: 3px solid black;
+        background-color: white;
+        margin: 10px 0 10px 0;
+        margin-left: 10%;
+        width: 70%;
+        height: 45px;
+        justify-content: space-around;
+        align-items: center;
+        .country-content {
+          .new_country_input {
+            appearance: none;
+            outline: none;
+            border: none;
+            background: none;
+            width: 190px;
+            font-size: 16px;
+            font-family: $font-text;
+            color: $placeholder-color-text;
+          }
+          ::placeholder {
+            color: $placeholder-color-text;
+          }
         }
-      }
-      form {
-        // input
-        #add-country-input {
-          appearance: none;
-          outline: none;
-          border: 3px solid black;
-          width: 20%;
-          height: 45px;
-          font-size: 16px;
-          font-family: $font-text;
-          color: $placeholder-color-text;
-        }
-        ::placeholder {
-          color: $placeholder-color-text;
-        }
-        // button
-        #new-country-submit {
-          border: 3px solid black;
-          background-color: $background-color-botton-green;
-          color: $text-color-button-green;
-          height: 50px;
-        }
-      }
-      .countries-list {
-        h2 {
-          font-family: $font-title;
-          color: $fontColor;
-        }
-        #countries {
-          .country {
-            display: flex;
-            border: 3px solid black;
-            background-color: white;
-            width: 25%;
-            height: 45px;
-            justify-content: space-around;
-            align-items: center;
-            .country-content {
-              .new_country_input {
-                appearance: none;
-                outline: none;
-                border: none;
-                background: none;
-                width: 190px;
-                font-size: 16px;
-                font-family: $font-text;
-                color: $placeholder-color-text;
-              }
-              ::placeholder {
-                color: $placeholder-color-text;
-              }
-            }
-            .button-actions {
-              display: flex;
-              align-items: center;
-              .edit-button {
-                border: none;
-                font-family: $font-title;
-                color: $text-color-button-green;
-                background-color: $background-color-botton-green;
-                height: 30px;
-                margin-right: 8px;
-              }
-              .clear-button {
-                border: none;
-                font-family: $font-title;
-                color: $text-color-button-red;
-                background-color: $background-color-botton-red;
-                height: 30px;
-              }
-            }
+        .button-actions {
+          display: flex;
+          align-items: center;
+          .edit-button {
+            border: none;
+            font-family: $font-title;
+            color: $text-color-button-green;
+            background-color: $background-color-botton-green;
+            height: 30px;
+            margin-right: 8px;
+            padding: 8px;
+          }
+          .clear-button {
+            border: none;
+            font-family: $font-title;
+            color: $text-color-button-red;
+            background-color: $background-color-botton-red;
+            height: 30px;
+            padding: 8px;
           }
         }
       }
     }
   }
+  
+  h2 {
+    margin: 10%;
+    font-family: $font-title;
+    color: $fontColor;
+  }
+  #spin {
+    color: white;
+    background-color: $background-color-botton-green;
+    margin-left: 10%;
+    width: 14%;
+    border: 3px solid black;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  #roulette {
+    padding: 10px;
+    flex-direction: column;
+    h2 {
+      font-size: medium;
+      text-align: center;
+      margin: 10px;
+    }
+    h4 {
+      font-size: small;
+      text-align: center;
+    }
+    form {
+      #add-country-input {
+        margin-left: 8%;
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  #roulette {
+    background-color: $background-color-ruleta;
+    padding: 10px;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      margin: 30px;
+    }
+    h4 {
+      text-align: center;
+    }
+    form {
+      #add-country-input {
+        margin-left: 15%;
+      }
+    }
+    .countries-list {
+    
+      #countries {
+        .country {
+          display: flex;
+          border: 3px solid black;
+          background-color: white;
+          margin: 15%;
+          width: 68%;
+          height: 45px;
+        }
+      }
+    }
+  }
+}
+

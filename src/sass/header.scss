@@ -2,7 +2,7 @@ header {
   background-color: white;
 
   .logo {
-    margin-top: 5%;
+    margin: 2%;
     display: flex;
     justify-content: space-between;
 
@@ -19,25 +19,23 @@ header {
   }
 
   .menubar {
-    height: 30px;
+    height: 40px;
+    width: 60;
     background-color: $background-color-ruleta;
     display: flex;
     justify-content: center;
 
     .buttons {
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin: 5px;
       #but1 {
         font-size: xx-small;
-        background-color: $background-color-botton-green;
-        color: $text-color-button-green;
+        color: $placeholder-color-text;
         font-family: $font-title;
       }
 
       #but2 {
         font-size: xx-small;
-        background-color: $background-color-botton-green;
-        color: $text-color-button-green;
+        color: $placeholder-color-text;
         font-family: $font-title;
       }
     }
@@ -56,7 +54,8 @@ header {
         }
 
         h4 {
-          font-size: 100%;
+          margin:13px;
+          font-size: 80%;
         }
       }
     }
@@ -82,9 +81,10 @@ header {
   }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1023px) {
   body {
     header {
+      
       .logo {
         margin-top: 5%;
 
@@ -123,7 +123,6 @@ header {
   body {
     header {
       .logo {
-        margin-top: 5%;
 
         img {
           width: 250px;

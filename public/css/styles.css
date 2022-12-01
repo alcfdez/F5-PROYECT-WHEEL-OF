@@ -7,83 +7,11 @@
   list-style: none;
 }
 
-* #input-box {
-  background-color: #8FA593;
-  padding-bottom: 20px;
-}
-* #input-box #list-title h2 {
-  font-family: "Rubik Mono One", sans-serif;
-  color: #557A55;
-}
-* #input-box form #add-country-input {
-  appearance: none;
-  outline: none;
-  border: 3px solid black;
-  width: 20%;
-  height: 45px;
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
-  color: #43784F;
-}
-* #input-box form ::placeholder {
-  color: #43784F;
-}
-* #input-box form #new-country-submit {
-  border: 3px solid black;
-  background-color: #557A55;
-  color: #8FD89F;
-  height: 50px;
-}
-* #input-box .countries-list h2 {
-  font-family: "Rubik Mono One", sans-serif;
-  color: #557A55;
-}
-* #input-box .countries-list #countries .country {
-  display: flex;
-  border: 3px solid black;
-  background-color: white;
-  width: 25%;
-  height: 45px;
-  justify-content: space-around;
-  align-items: center;
-}
-* #input-box .countries-list #countries .country .country-content .new_country_input {
-  appearance: none;
-  outline: none;
-  border: none;
-  background: none;
-  width: 190px;
-  font-size: 16px;
-  font-family: "Rubik", sans-serif;
-  color: #43784F;
-}
-* #input-box .countries-list #countries .country .country-content ::placeholder {
-  color: #43784F;
-}
-* #input-box .countries-list #countries .country .button-actions {
-  display: flex;
-  align-items: center;
-}
-* #input-box .countries-list #countries .country .button-actions .edit-button {
-  border: none;
-  font-family: "Rubik Mono One", sans-serif;
-  color: #8FD89F;
-  background-color: #557A55;
-  height: 30px;
-  margin-right: 8px;
-}
-* #input-box .countries-list #countries .country .button-actions .clear-button {
-  border: none;
-  font-family: "Rubik Mono One", sans-serif;
-  color: #F37070;
-  background-color: #D20000;
-  height: 30px;
-}
 header {
   background-color: white;
 }
 header .logo {
-  margin-top: 5%;
+  margin: 2%;
   display: flex;
   justify-content: space-between;
 }
@@ -97,25 +25,23 @@ header .logo h4 {
   font-size: 30%;
 }
 header .menubar {
-  height: 30px;
+  height: 40px;
+  width: 60;
   background-color: #8FA593;
   display: flex;
   justify-content: center;
 }
 header .menubar .buttons {
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin: 5px;
 }
 header .menubar .buttons #but1 {
   font-size: xx-small;
-  background-color: #557A55;
-  color: #8FD89F;
+  color: #43784F;
   font-family: "Rubik Mono One", sans-serif;
 }
 header .menubar .buttons #but2 {
   font-size: xx-small;
-  background-color: #557A55;
-  color: #8FD89F;
+  color: #43784F;
   font-family: "Rubik Mono One", sans-serif;
 }
 
@@ -128,7 +54,8 @@ header .menubar .buttons #but2 {
     height: 75px;
   }
   body header .logo h4 {
-    font-size: 100%;
+    margin: 13px;
+    font-size: 80%;
   }
 }
 @media (min-width: 426px) and (max-width: 768px) {
@@ -143,7 +70,7 @@ header .menubar .buttons #but2 {
     font-size: 100%;
   }
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1023px) {
   body header .logo {
     margin-top: 5%;
   }
@@ -171,9 +98,6 @@ header .menubar .buttons #but2 {
   }
 }
 @media (min-width: 1024px) and (max-width: 2560px) {
-  body header .logo {
-    margin-top: 5%;
-  }
   body header .logo img {
     width: 250px;
     height: 75px;
@@ -201,6 +125,150 @@ main video {
   width: 100%;
 }
 
+#roulette {
+  background-color: #8FA593;
+  padding: 25px;
+  display: flex;
+}
+#roulette #list-title h2 {
+  margin-bottom: 5%;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #557A55;
+}
+#roulette #list-title h4 {
+  margin-bottom: 5%;
+  text-align: center;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #557A55;
+}
+#roulette form #add-country-input {
+  appearance: none;
+  outline: none;
+  border: 3px solid black;
+  width: 60%;
+  height: 45px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #43784F;
+  margin: 10px 0 10px;
+  padding: 3px;
+  margin-left: 10%;
+}
+#roulette form ::placeholder {
+  color: #43784F;
+}
+#roulette form #new-country-submit {
+  border: 3px solid black;
+  background-color: #557A55;
+  color: #8FD89F;
+  height: 56px;
+}
+#roulette .countries-list h2 {
+  margin: 0;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #557A55;
+}
+#roulette .countries-list #countries .country {
+  display: flex;
+  border: 3px solid black;
+  background-color: white;
+  margin: 10px 0 10px 0;
+  margin-left: 10%;
+  width: 70%;
+  height: 45px;
+  justify-content: space-around;
+  align-items: center;
+}
+#roulette .countries-list #countries .country .country-content .new_country_input {
+  appearance: none;
+  outline: none;
+  border: none;
+  background: none;
+  width: 190px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #43784F;
+}
+#roulette .countries-list #countries .country .country-content ::placeholder {
+  color: #43784F;
+}
+#roulette .countries-list #countries .country .button-actions {
+  display: flex;
+  align-items: center;
+}
+#roulette .countries-list #countries .country .button-actions .edit-button {
+  border: none;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #8FD89F;
+  background-color: #557A55;
+  height: 30px;
+  margin-right: 8px;
+  padding: 8px;
+}
+#roulette .countries-list #countries .country .button-actions .clear-button {
+  border: none;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #F37070;
+  background-color: #D20000;
+  height: 30px;
+  padding: 8px;
+}
+#roulette h2 {
+  margin: 10%;
+  font-family: "Rubik Mono One", sans-serif;
+  color: #557A55;
+}
+#roulette #spin {
+  color: white;
+  background-color: #557A55;
+  margin-left: 10%;
+  width: 14%;
+  border: 3px solid black;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  #roulette {
+    padding: 10px;
+    flex-direction: column;
+  }
+  #roulette h2 {
+    font-size: medium;
+    text-align: center;
+    margin: 10px;
+  }
+  #roulette h4 {
+    font-size: small;
+    text-align: center;
+  }
+  #roulette form #add-country-input {
+    margin-left: 8%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  #roulette {
+    background-color: #8FA593;
+    padding: 10px;
+    flex-direction: column;
+  }
+  #roulette h2 {
+    text-align: center;
+    margin: 30px;
+  }
+  #roulette h4 {
+    text-align: center;
+  }
+  #roulette form #add-country-input {
+    margin-left: 15%;
+  }
+  #roulette .countries-list #countries .country {
+    display: flex;
+    border: 3px solid black;
+    background-color: white;
+    margin: 15%;
+    width: 68%;
+    height: 45px;
+  }
+}
 footer {
   font-family: "Rubik", sans-serif;
   background-color: #F2F3CA;

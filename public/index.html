@@ -17,46 +17,47 @@
 
       <div class="menubar">
         <nav class="buttons">
-          <button id="but1" href="#">HOME</button>
-          <button id="but2" href="#">ROULETTE</button>
+          <a href="#" id="but1">HOME </a>
+          <a href="#input-box" id="but2">ROULETTE</a>
         </nav>
       </div>
     </header>
 
     <main>
-        <video poster="" id="video-song" autoplay muted loop>
-            <source src="./assets/banner-random-travel.mp4" type="video/mp4" />
-          </video>
-    </main>
-    <section id="input-box">
-      <div id="list-title">
-        <h2>WERE WOULD YOU WANT TO GO?</h2>
-        <h2>ENTER AS MANY CITIES AS YOU WANT</h2>
-      </div>
-      <form id="add-country-form">
-        <input
-          type="text"
-          name="new-task-input"
-          id="add-country-input"
-          placeholder="Type your wish city here..."
-        />
-        <button type="submit" id="new-country-submit">SUBMIT</button>
-      </form>
-      <div class="countries-list">
-        <h2>WOULD YOU LIKE TO EDIT OR CLEAR ANY OF YOUR CHOSEN LOCATIONS?</h2>
-        <div id="countries"></div>
-      </div>
-    </section>
+      <video poster="" id="video-song" autoplay muted loop>
+        <source src="./assets/banner-random-travel.mp4" type="video/mp4" />
+      </video>
     
-    <section>
-      <input type="button" value="Hacer girar" style="float: left" id="spin" />
+    <section id="roulette">
+      <div id="input-box">
+        <div id="list-title">
+          <h2>WERE WOULD YOU WANT TO GO?</h2>
+          <h4>ENTER AS MANY CITIES AS YOU WANT</h2>
+        </div>
+        <form id="add-country-form">
+          <input
+            type="text"
+            name="new-task-input"
+            id="add-country-input"
+            placeholder="Type your wish city here..."
+          />
+          <button type="submit" id="new-country-submit">SUBMIT</button>
+        </form>
+        <div class="countries-list">
+          <h2>WOULD YOU LIKE TO EDIT OR CLEAR ANY OF YOUR CHOSEN LOCATIONS?</h2>
+          <div id="countries"></div>
+        </div>
+      </div>
+      <div>
+        <h2>SPIN THE ROULETTE !</h2>
+      <input type="button" value="SPIN IT!"  id="spin" />
       <canvas id="canvas" width="500" height="500"></canvas>
+      </div>
     </section>
-    
+  </main>
     <footer>
       <p>©2022 Random Travel</p>
     </footer>
-    <script src="./js/roulette.js"></script>
-    
+    <script src="./js/app.js"></script>
   </body>
 </html>
