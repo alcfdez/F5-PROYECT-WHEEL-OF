@@ -4,6 +4,7 @@ header {
   background-color: white;
 }
 header .logo {
+  margin-top: 5%;
   display: flex;
   justify-content: space-between;
 }
@@ -11,7 +12,7 @@ header .logo img {
   width: 100px;
   height: 25px;
 }
-header .logo h6 {
+header .logo h4 {
   color: #557A55;
   font-family: "Rubik Mono One", sans-serif;
   font-size: 30%;
@@ -21,7 +22,6 @@ header .menubar {
   background-color: #8FA593;
   display: flex;
   justify-content: center;
-  margin-top: 10%;
 }
 header .menubar .buttons {
   margin-top: 5px;
@@ -40,17 +40,84 @@ header .menubar .buttons #but2 {
   font-family: "Rubik Mono One", sans-serif;
 }
 
-section {
-  display: flex;
-  justify-content: space-between;
-  font-family: "Rubik", sans-serif;
-  color: #557A55;
+@media (minmin-width: 320px) and (max-width: 475px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 230px;
+    height: 75px;
+  }
+  body header .logo h4 {
+    font-size: 100%;
+  }
 }
-
-/* @media (max-width: 374px) {
-    img { width: 100%; }
-
-  } */
+@media (min-width: 475px) and (max-width: 1023px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 115px;
+    height: 35px;
+  }
+  body header .logo h4 {
+    font-size: 50%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 200px;
+    height: 50px;
+  }
+  body header .logo h4 {
+    font-size: 100%;
+  }
+  body header .menubar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  body header .menubar .buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  body header .menubar .buttons #but1 {
+    font-size: medium;
+  }
+  body header .menubar .buttons #but2 {
+    font-size: medium;
+  }
+}
+@media (min-width: 1024px) and (max-width: 2560px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 250px;
+    height: 75px;
+  }
+  body header .logo h4 {
+    font-size: 200%;
+  }
+  body header .menubar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  body header .menubar .buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  body header .menubar .buttons #but1 {
+    font-size: large;
+  }
+  body header .menubar .buttons #but2 {
+    font-size: large;
+  }
+}
 main {
   background-color: #8FA593;
 }
