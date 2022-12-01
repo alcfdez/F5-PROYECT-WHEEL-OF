@@ -1,32 +1,17 @@
-footer {
-  background-color: #F2F3CA;
-  text-align: center;
-  height: 50px;
-  font-weight: bold;
-  padding-top: 30px;
-  font-size: 15%;
-  color: black;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 2 |     font-family: $font-text;
+ *   |                  ^^^^^^^^^^
+ *   '
+ *   src/sass/footer.scss 2:18  root stylesheet */
 
-@media (minmin-width: 320px) and (max-width: 475px) {
-  footer {
-    font-size: 25%;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 2 \2502      font-family: $font-text;\a   \2502                   ^^^^^^^^^^\a   \2575 \a   src/sass/footer.scss 2:18  root stylesheet";
 }
-@media (min-width: 475px) and (max-width: 1023px) {
-  footer {
-    font-size: 35%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  footer {
-    font-size: 45%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 2560px) {
-  footer {
-    font-size: 100%;
-  }
-}
-
-/*# sourceMappingURL=footer.css.map */

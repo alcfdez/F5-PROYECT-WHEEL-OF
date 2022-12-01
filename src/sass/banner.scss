@@ -1,7 +1,4 @@
-@import '_variables.scss';
-
 main {
-    background-color: $background-color-ruleta;
 
     video{
         width: 100%;
@@ -11,8 +8,20 @@ main {
 
 
 
-@media (min-width: 320px) and (max-width: 374px) {
-    video { width: 100%;
-
-    }
+@media (min-width: 320px) and (max-width: 425px) {
+   
   }
+  
+  @media (min-width: 426px) and (max-width: 768px) {
+   
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+  
+  
+  @media (min-width: 1024px) and (max-width: 2560px) {
+    
+  }
+  

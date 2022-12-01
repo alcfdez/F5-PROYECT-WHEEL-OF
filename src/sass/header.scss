@@ -1,178 +1,157 @@
-@import '_variables.scss';
+header {
+  background-color: white;
 
-header{
+  .logo {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 
-    background-color: white;
-
-        .logo{
-        margin-top: 5%;
-        display: flex;
-        justify-content: space-between;
-
-            img {
-             width: 100px;
-             height: 25px;
-             }
-
-            h4{
-             color: $fontColor;
-             font-family: $font-title;
-             font-size: 30%;
-             }
-
-        }
-
-        .menubar{
-            height: 30px;
-            background-color: $background-color-ruleta;
-            display: flex;
-            justify-content: center;
-            
-
-            .buttons{
-                margin-top: 5px;
-                margin-bottom: 5px;
-                #but1{
-                    font-size: xx-small;
-                    background-color: $background-color-botton-green;
-                    color: $text-color-button-green;
-                    font-family: $font-title;
-                     
-                }
-
-                #but2{
-                    font-size: xx-small;
-                    background-color: $background-color-botton-green;
-                    color: $text-color-button-green;
-                    font-family: $font-title;
-
-                }
-            }
-               
-        }
+    img {
+      width: 100px;
+      height: 25px;
     }
-    
-    
 
-        
-
-@media (min-width: 320px) and (max-width: 475px) {
-    body {
-        header{
-            .logo{
-            margin-top: 5%;
-                       
-                 img {
-                 width: 230px;
-                 height: 75px;
-                 }
-        
-                 h4{
-                font-size: 100%;
-                     }
-            }  
-        }   
+    h4 {
+      color: $fontColor;
+      font-family: $font-title;
+      font-size: 30%;
     }
+  }
+
+  .menubar {
+    height: 30px;
+    background-color: $background-color-ruleta;
+    display: flex;
+    justify-content: center;
+
+    .buttons {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      #but1 {
+        font-size: xx-small;
+        background-color: $background-color-botton-green;
+        color: $text-color-button-green;
+        font-family: $font-title;
+      }
+
+      #but2 {
+        font-size: xx-small;
+        background-color: $background-color-botton-green;
+        color: $text-color-button-green;
+        font-family: $font-title;
+      }
+    }
+  }
 }
 
-@media (min-width: 475px) and (max-width: 1023px) {
-    body {
-        header{
-            .logo{
-                margin-top: 5%;
-                           
-                img {
-                     width: 115px;
-                     height: 35px;
-                     }
-            
-                h4{
-                    font-size: 50%;
-                         }
-            
-            }
+@media (min-width: 320px) and (max-width: 425px) {
+  body {
+    header {
+      .logo {
+        margin-top: 5%;
+
+        img {
+          width: 230px;
+          height: 75px;
         }
-    }   
-}     
+
+        h4 {
+          font-size: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  body {
+    header {
+      .logo {
+        margin-top: 5%;
+
+        img {
+          width: 115px;
+          height: 35px;
+        }
+
+        h4 {
+          font-size: 100%;
+        }
+      }
+    }
+  }
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
-        body{
-            header{
-                .logo{
-                margin-top: 5%;
-                           
-                     img {
-                     width: 200px;
-                     height: 50px;
-                     }
-            
-                    h4{
-                    font-size: 100%;
-                         }
-            
-                    }
-            
-                    .menubar{
-                        height: 40px;
-                        display: flex;
-                        justify-content: center;
-                        
-            
-                        .buttons{
-                            margin-top: 5px;
-                            margin-bottom: 5px;
-                            #but1{
-                                font-size: medium;                                    
-                            }
-            
-                            #but2{
-                                font-size: medium;
-                            }
-                        }
-                           
-                    }
-                }
-                
-            }
+  body {
+    header {
+      .logo {
+        margin-top: 5%;
+
+        img {
+          width: 200px;
+          height: 50px;
         }
- 
- @media (min-width: 1024px) and (max-width: 2560px) {
-            body{
-                header{
-                    .logo{
-                    margin-top: 5%;
-                               
-                         img {
-                         width: 250px;
-                         height: 75px;
-                         }
-                
-                        h4{
-                        font-size: 200%;
-                             }
-                
-                        }
-                
-                        .menubar{
-                            height: 40px;
-                            display: flex;
-                            justify-content: center;
-                            
-                
-                            .buttons{
-                                margin-top: 5px;
-                                margin-bottom: 5px;
-                                #but1{
-                                    font-size: large;                                    
-                                }
-                
-                                #but2{
-                                    font-size: large;
-                                }
-                            }
-                               
-                        }
-                    }
-                    
-                }
-            }
+
+        h4 {
+          font-size: 100%;
+        }
+      }
+
+      .menubar {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+
+        .buttons {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          #but1 {
+            font-size: medium;
+          }
+
+          #but2 {
+            font-size: medium;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 2560px) {
+  body {
+    header {
+      .logo {
+        margin-top: 5%;
+
+        img {
+          width: 250px;
+          height: 75px;
+        }
+
+        h4 {
+          font-size: 200%;
+        }
+      }
+
+      .menubar {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+
+        .buttons {
+          margin-top: 5px;
+          margin-bottom: 5px;
+          #but1 {
+            font-size: large;
+          }
+
+          #but2 {
+            font-size: large;
+          }
+        }
+      }
+    }
+  }
+}

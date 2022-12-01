@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
 header {
   background-color: white;
 }
@@ -40,7 +47,7 @@ header .menubar .buttons #but2 {
   font-family: "Rubik Mono One", sans-serif;
 }
 
-@media (min-width: 320px) and (max-width: 475px) {
+@media (min-width: 320px) and (max-width: 425px) {
   body header .logo {
     margin-top: 5%;
   }
@@ -52,7 +59,7 @@ header .menubar .buttons #but2 {
     font-size: 100%;
   }
 }
-@media (min-width: 475px) and (max-width: 1023px) {
+@media (min-width: 426px) and (max-width: 768px) {
   body header .logo {
     margin-top: 5%;
   }
@@ -61,7 +68,7 @@ header .menubar .buttons #but2 {
     height: 35px;
   }
   body header .logo h4 {
-    font-size: 50%;
+    font-size: 100%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -118,47 +125,19 @@ header .menubar .buttons #but2 {
     font-size: large;
   }
 }
-main {
-  background-color: #8FA593;
-}
 main video {
   width: 100%;
 }
 
-@media (min-width: 320px) and (max-width: 374px) {
-  video {
-    width: 100%;
-  }
-}
 footer {
+  font-family: "Rubik", sans-serif;
   background-color: #F2F3CA;
   text-align: center;
   height: 50px;
   font-weight: bold;
   padding-top: 30px;
-  font-size: 15%;
+  font-size: 100%;
   color: black;
-}
-
-@media (minmin-width: 320px) and (max-width: 475px) {
-  footer {
-    font-size: 25%;
-  }
-}
-@media (min-width: 475px) and (max-width: 1023px) {
-  footer {
-    font-size: 35%;
-  }
-}
-@media (min-width: 769px) and (max-width: 1024px) {
-  footer {
-    font-size: 45%;
-  }
-}
-@media (min-width: 1024px) and (max-width: 2560px) {
-  footer {
-    font-size: 100%;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
