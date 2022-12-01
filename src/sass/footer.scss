@@ -1,0 +1,36 @@
+@import '_variables.scss';
+
+footer{
+    background-color: $background-color-footer;
+    text-align: center;
+    height: 50px;
+    font-weight: bold;
+    padding-top: 30px;
+    font-size: 15%;
+    color: black;
+}
+
+@media (minmin-width: 320px) and (max-width: 475px) {
+    footer{
+        font-size:25%;
+   }
+}
+
+@media (min-width: 475px) and (max-width: 1023px) {
+    footer{
+        font-size:35%;
+   }
+ }
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    footer{
+        font-size:45%;
+   }
+ }
+
+ @media (min-width: 1024px) and (max-width: 2560px) {
+         footer{
+        font-size:100%;
+   }   
+ }
