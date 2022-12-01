@@ -15,7 +15,7 @@ form.addEventListener("submit", (e) => {
 
   let countriesList = allCountries.push(country);
   console.log(allCountries);
-
+  console.log('2', countriesList);
   const new_country_input = document.createElement("input");
   new_country_input.classList.add("new_country_input");
   new_country_input.type = "text";
@@ -48,20 +48,13 @@ form.addEventListener("submit", (e) => {
   country_button_delete.addEventListener("click", () => {
     country_list.removeChild(new_country);
   });
+  drawRouletteWheel()
 });
 
-let options = [
-  "City 1",
-  "City 2",
-  "City 3",
-  "City 4",
-  "City 5",
-  "City 6",
-  "city 7",
-];
+// let allCountries = ["City 1","City 2","City 3","City 4","City 5","City 6","city 7"];
 
 let startAngle = 0;
-let arc = Math.PI / (options.length / 2);
+let arc = Math.PI / ((allCountries.length+1) / 2);
 let spinTimeout = null;
 
 let spinArcStart = 10;
@@ -96,8 +89,17 @@ function getColor(item, maxitem) {
 
   return RGB2Color(red, green, blue);
 }
+// function updated() {
+//   if(allCountries !== allCountries){
+//     drawRouletteWheel();
+//   }
+// }
 
 function drawRouletteWheel() {
+  console.log('entra en la funcion');
+  if (allCountries.length > 1){
+    arc = Math.PI / ((allCountries.length) / 2);
+  }
   let canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     let outsideRadius = 200;
@@ -110,12 +112,13 @@ function drawRouletteWheel() {
     canvasStyle.strokeStyle = "black";
     canvasStyle.lineWidth = 3;
 
-    //canvasStyle.font = 'bold 15px Rubik Mono One';
+    canvasStyle.font = 'bold 15px Rubik Mono One';
 
-    for (let i = 0; i < options.length; i++) {
+    for (let i = 0; i < allCountries.length; i++) {
+      console.log('entra en el bucle de render');
       let angle = startAngle + i * arc;
       //canvasStyle.fillStyle = colors[i];
-      canvasStyle.fillStyle = getColor(i, options.length);
+      canvasStyle.fillStyle = getColor(i, allCountries.length);
 
       canvasStyle.beginPath();
       canvasStyle.arc(250, 250, outsideRadius, angle, angle + arc, false);
@@ -134,7 +137,7 @@ function drawRouletteWheel() {
         250 + Math.sin(angle + arc / 2) * textRadius
       );
       canvasStyle.rotate(angle + arc / 2 + Math.PI / 2);
-      let text = options[i];
+      let text = allCountries[i];
       canvasStyle.fillText(text, -canvasStyle.measureText(text).width / 2, 0);
       canvasStyle.restore();
     }
@@ -181,7 +184,7 @@ function stopRotateWheel() {
   let index = Math.floor((360 - (degrees % 360)) / arcd);
   canvasStyle.save();
   canvasStyle.font = "bold 30px Helvetica, Arial";
-  let text = options[index];
+  let text = allCountries[index] + "!";
   canvasStyle.fillText(
     text,
     250 - canvasStyle.measureText(text).width / 2,
@@ -196,4 +199,4 @@ function easeOut(t, b, c, d) {
   return b + c * (tc + -3 * ts + 3 * t);
 }
 
-drawRouletteWheel();
+ drawRouletteWheel();
