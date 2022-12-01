@@ -1,11 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@1,500&display=swap");
-header #logo img {
-  width: 10%;
-}
-header #logo #p-logo {
-  font-family: "Rubik Mono One", sans-serif;
-  color: #557A55;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 * #input-box {
@@ -79,6 +78,138 @@ header #logo #p-logo {
   color: #F37070;
   background-color: #D20000;
   height: 30px;
+}
+header {
+  background-color: white;
+}
+header .logo {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo img {
+  width: 100px;
+  height: 25px;
+}
+header .logo h4 {
+  color: #557A55;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 30%;
+}
+header .menubar {
+  height: 30px;
+  background-color: #8FA593;
+  display: flex;
+  justify-content: center;
+}
+header .menubar .buttons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+header .menubar .buttons #but1 {
+  font-size: xx-small;
+  background-color: #557A55;
+  color: #8FD89F;
+  font-family: "Rubik Mono One", sans-serif;
+}
+header .menubar .buttons #but2 {
+  font-size: xx-small;
+  background-color: #557A55;
+  color: #8FD89F;
+  font-family: "Rubik Mono One", sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 230px;
+    height: 75px;
+  }
+  body header .logo h4 {
+    font-size: 100%;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 115px;
+    height: 35px;
+  }
+  body header .logo h4 {
+    font-size: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 200px;
+    height: 50px;
+  }
+  body header .logo h4 {
+    font-size: 100%;
+  }
+  body header .menubar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  body header .menubar .buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  body header .menubar .buttons #but1 {
+    font-size: medium;
+  }
+  body header .menubar .buttons #but2 {
+    font-size: medium;
+  }
+}
+@media (min-width: 1024px) and (max-width: 2560px) {
+  body header .logo {
+    margin-top: 5%;
+  }
+  body header .logo img {
+    width: 250px;
+    height: 75px;
+  }
+  body header .logo h4 {
+    font-size: 200%;
+  }
+  body header .menubar {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  body header .menubar .buttons {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  body header .menubar .buttons #but1 {
+    font-size: large;
+  }
+  body header .menubar .buttons #but2 {
+    font-size: large;
+  }
+}
+main video {
+  width: 100%;
+}
+
+footer {
+  font-family: "Rubik", sans-serif;
+  background-color: #F2F3CA;
+  text-align: center;
+  height: 50px;
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 100%;
+  color: black;
 }
 
 /*# sourceMappingURL=styles.css.map */

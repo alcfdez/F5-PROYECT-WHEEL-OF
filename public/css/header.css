@@ -1,9 +1,17 @@
-header #logo img {
-  width: 10%;
-}
-header #logo #p-logo {
-  font-family: "Rubik Mono One", sans-serif;
-  color: #557A55;
-}
+/* Error: Undefined variable.
+ *    ,
+ * 15 |       color: $fontColor;
+ *    |              ^^^^^^^^^^
+ *    '
+ *   src/sass/header.scss 15:14  root stylesheet */
 
-/*# sourceMappingURL=header.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a    \2577 \a 15 \2502        color: $fontColor;\a    \2502               ^^^^^^^^^^\a    \2575 \a   src/sass/header.scss 15:14  root stylesheet";
+}

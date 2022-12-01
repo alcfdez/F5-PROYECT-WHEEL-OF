@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Random Travel</title>
   </head>
+
   <body>
     <header>
-      <div id="logo">
+      <div class="logo">
         <img src="./assets/logo random travel.PNG" alt="logo random travel" />
-        <p id="p-logo">WE INSPIRE YOUR WISH TRAVEL</p>
+        <h4>WE INSPIRE YOUR WISH TRAVEL</h4>
       </div>
 
-      <ul>
-        <li>
-          <a href="#">HOME</a>
-        </li>
-        <li>
-          <a href="#">ROULETTE</a>
-        </li>
-        <li>
-          <a href="#">FOOTER</a>
-        </li>
-      </ul>
+      <div class="menubar">
+        <nav class="buttons">
+          <button id="but1" href="#">HOME</button>
+          <button id="but2" href="#">ROULETTE</button>
+        </nav>
+      </div>
     </header>
 
+    <main>
+        <video poster="" id="video-song" autoplay muted loop>
+            <source src="./assets/banner-random-travel.mp4" type="video/mp4" />
+          </video>
+    </main>
     <section id="input-box">
       <div id="list-title">
         <h2>WERE WOULD YOU WANT TO GO?</h2>
@@ -46,10 +47,16 @@
         <div id="countries"></div>
       </div>
     </section>
+    
     <section>
       <input type="button" value="Hacer girar" style="float: left" id="spin" />
       <canvas id="canvas" width="500" height="500"></canvas>
     </section>
+    
+    <footer>
+      <p>©2022 Random Travel</p>
+    </footer>
     <script src="./js/roulette.js"></script>
+    
   </body>
 </html>
