@@ -15,7 +15,27 @@ header .logo h6 {
   font-size: 30%;
 }
 header .menubar {
+  height: 30px;
   background-color: #8FA593;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+header .menubar .buttons {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+header .menubar .buttons #but1 {
+  font-size: xx-small;
+  background-color: #557A55;
+  color: #8FD89F;
+  font-family: "Rubik Mono One", sans-serif;
+}
+header .menubar .buttons #but2 {
+  font-size: xx-small;
+  background-color: #557A55;
+  color: #8FD89F;
+  font-family: "Rubik Mono One", sans-serif;
 }
 
 section {

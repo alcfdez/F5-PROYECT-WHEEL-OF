@@ -22,7 +22,32 @@ header{
         }
 
         .menubar{
+            height: 30px;
             background-color: $background-color-ruleta;
+            display: flex;
+            justify-content: center;
+            margin-top: 10%;
+
+            .buttons{
+                margin-top: 5px;
+                margin-bottom: 5px;
+                #but1{
+                    font-size: xx-small;
+                    background-color: $background-color-botton-green;
+                    color: $text-color-button-green;
+                    font-family: $font-title;
+                     
+                }
+
+                #but2{
+                    font-size: xx-small;
+                    background-color: $background-color-botton-green;
+                    color: $text-color-button-green;
+                    font-family: $font-title;
+
+                }
+            }
+               
         }
     }
     

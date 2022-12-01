@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["../../src/sass/banner.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;;AAIJ;EACI;IAAQ","file":"banner.css"}
+{"version":3,"sourceRoot":"","sources":["../../src/sass/banner.scss","../../src/sass/_variables.scss"],"names":[],"mappings":"AAEA;EACI,kBCIqB;;ADFrB;EACI;;;AAOR;EACI;IAAQ","file":"banner.css"}
