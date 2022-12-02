@@ -4,7 +4,7 @@
   display: flex;
   #list-title {
     h2 {
-      margin-bottom:5% ;
+      margin-bottom: 5%;
       font-family: $font-title;
       color: $fontColor;
     }
@@ -25,7 +25,7 @@
       font-size: 16px;
       font-family: $font-text;
       color: $placeholder-color-text;
-      margin: 10px 0 10px ;
+      margin: 10px 0 10px;
       padding: 3px;
       margin-left: 10%;
     }
@@ -95,7 +95,7 @@
       }
     }
   }
-  
+
   h2 {
     margin: 10%;
     font-family: $font-title;
@@ -148,7 +148,6 @@
       }
     }
     .countries-list {
-    
       #countries {
         .country {
           display: flex;
@@ -162,4 +161,3 @@
     }
   }
 }
-

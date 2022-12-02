@@ -14,8 +14,7 @@ form.addEventListener("submit", (e) => {
   new_country.appendChild(country_content);
 
   let countriesList = allCountries.push(country);
-  console.log(allCountries);
-  console.log('2', countriesList);
+  
   const new_country_input = document.createElement("input");
   new_country_input.classList.add("new_country_input");
   new_country_input.type = "text";
@@ -48,12 +47,11 @@ form.addEventListener("submit", (e) => {
   country_button_delete.addEventListener("click", () => {
     country_list.removeChild(new_country);
   });
-  drawRouletteWheel()
+  drawRouletteWheel();
 });
 
-
 let startAngle = 0;
-let arc = Math.PI / ((allCountries.length+1) / 2);
+let arc = Math.PI / ((allCountries.length + 1) / 2);
 let spinTimeout = null;
 
 let spinArcStart = 10;
@@ -90,8 +88,8 @@ function getColor(item, maxitem) {
 }
 
 function drawRouletteWheel() {
-  if (allCountries.length > 1){
-    arc = Math.PI / ((allCountries.length) / 2);
+  if (allCountries.length > 1) {
+    arc = Math.PI / (allCountries.length / 2);
   }
   let canvas = document.getElementById("canvas");
   if (canvas.getContext) {
@@ -105,11 +103,11 @@ function drawRouletteWheel() {
     canvasStyle.strokeStyle = "black";
     canvasStyle.lineWidth = 3;
 
-    canvasStyle.font = 'bold 15px Rubik Mono One';
+    canvasStyle.font = "bold 15px Rubik Mono One";
 
     for (let i = 0; i < allCountries.length; i++) {
       let angle = startAngle + i * arc;
-    
+
       canvasStyle.fillStyle = getColor(i, allCountries.length);
 
       canvasStyle.beginPath();
@@ -190,4 +188,4 @@ function easeOut(t, b, c, d) {
   return b + c * (tc + -3 * ts + 3 * t);
 }
 
- drawRouletteWheel();
+drawRouletteWheel();
