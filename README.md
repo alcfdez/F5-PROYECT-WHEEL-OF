@@ -1,5 +1,8 @@
 PROYECTO GRUPO F5: WHEEL OF..
-EQUIPO 2: Ramiro, Gabi, Rosana, Caren, Daviz Muñoz  y Ali
+EQUIPO 2: Ramiro, Gabi, Rosana, Caren  y Ali
+
+Product owner: Ramiro
+Scrum Mastes: Ali
 
 
 CONTEXTO DEL PROYECTO:
@@ -25,3 +28,12 @@ EXTRAS:
 -Sección de resultados
 -Posibilidad de activar y desactivar participantes
 ​
+HERRAMIENTAS UTILIZADAS:
+    -HTML
+    -SASS
+    -JS
+    -FIGMA
+    -JIRA
+
+PROTOTIPO:
+https://github.com/alcfdez/F5-PROYECT-WHEEL-OF/blob/main/public/assets/prototipo.png
